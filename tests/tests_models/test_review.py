@@ -42,12 +42,13 @@ class TestReview(unittest.TestCase):
 
     def test_8_attributes(self):
         """Tests the attributes of Review class."""
+
         attributes = storage.attributes()["Review"]
         o = Review()
         for k, v in attributes.items():
             self.assertTrue(hasattr(o, k))
             self.assertEqual(type(getattr(o, k, None)), v)
 
+
 if __name__ == "__main__":
     unittest.main()
-
